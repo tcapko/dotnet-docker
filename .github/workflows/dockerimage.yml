@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build ./2.2.402 --file Dockerfile --tag my-image-name:$(date +%s)
+      run: cd 2.2.402/ && docker build . --file Dockerfile --tag my-image-name:$(date +%s)
